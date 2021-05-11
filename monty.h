@@ -38,4 +38,9 @@ stack_t *add_dnodeint(stack_t **head, const int n);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 size_t print_dlistint(const stack_t *h);
 
+/*get_opcode*/
+void (*get_opcode(char *token, unsigned int line)) (stack_t **, unsigned int);
+
+/*Invalid_instruction_error*/
+void Invalid_instruction_error(char *inv_instruction, unsigned int line)
 #endif /* MONTY_H */
