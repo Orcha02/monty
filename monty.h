@@ -36,5 +36,6 @@ typedef struct instruction_s
 
 stack_t *add_dnodeint(stack_t **head, const int n);
 int delete_dnodeint_at_index(stack_t **head, unsigned int index);
+size_t print_dlistint(const stack_t *h);
 
 #endif /* MONTY_H */
