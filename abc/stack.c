@@ -5,7 +5,7 @@
  * @line_number: constant int value in the structure
  * Return: void
  */
-void pint_stack(stack_t **top, unsigned int line_number)
+void pint_stack(stack_t **stack, unsigned int line_number)
 {
 	stack_t *tmp = *top;
 
