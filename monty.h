@@ -42,5 +42,10 @@ size_t print_dlistint(const stack_t *h);
 void (*get_opcode(char *token, unsigned int line)) (stack_t **, unsigned int);
 
 /*Invalid_instruction_error*/
-void Invalid_instruction_error(char *inv_instruction, unsigned int line)
+void Invalid_instruction_error(char *inv_instruction, unsigned int line);
+
+/* stack */
+
+void pint_stack(stack_t **top, unsigned int line_number);
+	
 #endif /* MONTY_H */

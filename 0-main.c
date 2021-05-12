@@ -2,7 +2,6 @@
 #include <string.h>
 #include <stdio.h>
 #include "monty.h"
-
 /**
  * main - check the code for Holberton School students.
  *
@@ -27,8 +26,12 @@ int main(void)
     new->next = head;
     new->prev = NULL;
     head = new;
+    add_dnodeint(&head, 98);
+    add_dnodeint(&head, 402);
+    add_dnodeint(&head, 505);
+    add_dnodeint(&head, 1024);
     n = print_dlistint(head);
-    printf("-> %lu elements\n", n);
     free(new);
+
     return (EXIT_SUCCESS);
 }
