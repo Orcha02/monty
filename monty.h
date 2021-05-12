@@ -42,7 +42,7 @@ size_t print_dlistint(const stack_t *h);
 
 /*get_opcode*/
 void (*get_opcode(char *token, unsigned int line)) (stack_t **, unsigned int);
-
+void open_file_to_read(char *filename);
 /*Invalid_instruction_error*/
 void Invalid_instruction_error(char *inv_instruction, unsigned int line);
 
