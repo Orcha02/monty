@@ -37,11 +37,11 @@ int is_number(char *token)
  */
 void open_file_to_read(char *filename)
 {
+	char len_buff[1024], *buffer = len_buff;
 	FILE *in_file;
-	size_t len_buff = 0;
 	char *instruction, *line_buffer = NULL, *token = NULL;
 	unsigned int line_counter = 1;
-	int i;
+	int i, n;
 	stack_t *stack;
 	/* stack_t *top = NULL; */
 	instruction_t operation[] = {
@@ -56,7 +56,7 @@ void open_file_to_read(char *filename)
 	in_file = fopen(filename, "r");
 	if (filename == NULL)
 		fprintf(stderr, "Error: Can't open file %s\n", filename);
-	while (getline(&line_buffer, &len_buff, in_file) != EOF)
+	while (fgets(buffer, 1024, in_file) != NULL)
 	{
 		printf("%s\n", line_buffer);
 		token = strtok(line_buffer, "\n\t\r ");
@@ -64,7 +64,7 @@ void open_file_to_read(char *filename)
 		  continue;*/
 		/*instruction = is_instruction(token);*/
 		number = is_number(token);
-		for (int n = 0; n != '\0'; n++)
+		for (n = 0; n != '\0'; n++)
 		{
 			if (strcmp(instruction, operation[n].opcode) == 0)
 			{
