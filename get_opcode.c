@@ -5,7 +5,7 @@
  * @line: line readed
  * Return: 0 on success and 1 if fails
  */
-int (*get_opcode(char *token, unsigned int line, stack_t **stack))
+int get_opcode(char *token, unsigned int line, stack_t **stack)
 {
         instruction_t operation[] = {
                 {"push", push_stack},
@@ -25,5 +25,5 @@ int (*get_opcode(char *token, unsigned int line, stack_t **stack))
                         return (0);
                 }
         }
-        return (NULL);
+        return (1);
 }

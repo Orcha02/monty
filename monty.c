@@ -21,10 +21,9 @@ int is_number(char *token)
 int open_file_to_read(char *filename, stack_t **stack)
 {
         FILE *in_file;
-        char *token = NULL, *buff_line;
+        char *token = NULL, *buff_line = NULL, *number = NULL;
         unsigned int line_counter = 0;
         size_t buff_size;
-        char *number;
 
         in_file = fopen(filename, "r");
         if (in_file == NULL)
@@ -41,7 +40,7 @@ int open_file_to_read(char *filename, stack_t **stack)
                 if (token && strcmp(token, "push") == 0)
                         take_num = atoi(number);
 		printf("token = %s, number = %d\n", token, take_num);
-                if (get_opcode(token, line_counter, stack) == NULL)
+                if (token && get_opcode(token, line_counter, stack) == 1)
                 {
                         fprintf(stderr, "Unknown instruction%s\n", filename);
                         exit(EXIT_FAILURE);

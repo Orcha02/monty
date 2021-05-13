@@ -41,7 +41,7 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 size_t print_dlistint(const stack_t *h);
 
 /*get_opcode*/
-int (*get_opcode(char *token, unsigned int line, stack_t **stack));
+int get_opcode(char *token, unsigned int line, stack_t **stack);
 
 /* stack */
 void pint_stack(stack_t **top, unsigned int line_number);
