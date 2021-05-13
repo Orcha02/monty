@@ -31,7 +31,6 @@ void _nop(stack_t **top, unsigned int line_number)
 }
 /**
  * _sub - Function that adds the top two elements of the stack
->>>>>>> parent of 6a5068c... create div function:stack_3.c
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
