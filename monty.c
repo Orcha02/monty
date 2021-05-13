@@ -64,7 +64,7 @@ int open_file_to_read(char *filename, stack_t **stack)
 		}
 	}
 	free(buff_line);
-	/* free_stack(stack); */
+	free_stack(stack);
 	fclose(in_file);
 	return (0);
 }

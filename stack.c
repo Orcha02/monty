@@ -70,13 +70,13 @@ void pint_stack(stack_t **top, unsigned int line_number)
  */
 void free_stack(stack_t **top)
 {
-	stack_t *tmp = NULL;
+	stack_t *tmp;
 
 	if (top == NULL)
 		return;
 
 	tmp = *top;
-	while (top != NULL)
+	while (tmp)
 	{
 		*top = tmp->next;
 		free(tmp);
