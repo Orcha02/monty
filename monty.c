@@ -14,7 +14,7 @@ int is_number(char *token)
 		return (-1);
 	for (i = 0; token[i] != '\0'; i++)
 	{
-		if (!(token[i] >= '0' && token[i] <= '9'))
+		if (!(token[i] >= '0' && token[i] <= '9') && token[i] != '-')
 			return (-1);
 	}
 	return (0);

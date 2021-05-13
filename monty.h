@@ -53,6 +53,11 @@ void pop_stack(stack_t **top, unsigned int line_number);
 /* stack_2 */
 void swap_stack(stack_t **top, unsigned int line_number);
 
+
+/* stack_3 */
+void _add(stack_t **top, unsigned int line_number);
+void _nop(stack_t **top, unsigned int line_number);
+
 /* monty.c */
 int is_number(char *token);
 int open_file_to_read(char *filename, stack_t **stack);
