@@ -1,6 +1,4 @@
 #include "monty.h"
-int take_num; /*global*/
-
 /**
  * is_number - checks if is a number
  * @token: string to check id is a number
@@ -57,7 +55,7 @@ int open_file_to_read(char *filename, stack_t **stack)
 			/* printf("token = %s, number = %d\n", token, take_num); */
 			if (get_opcode(token, line_counter, stack) == 1)
 			{
-				fprintf(stderr, "L%u Unknown instruction %s\n", line_counter, token);
+				fprintf(stderr, "L%u: Unknown instruction %s\n", line_counter, token);
 				_free(buff_line, in_file);
 				free_stack(stack);
 			}

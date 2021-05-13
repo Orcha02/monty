@@ -1,5 +1,4 @@
 #include "monty.h"
-int take_num;
 /**
  * swap_stack - Function that pushes an element to the stack
  * @top: element at the top of the stack (head)
