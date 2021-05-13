@@ -34,7 +34,7 @@ int open_file_to_read(char *filename, stack_t **stack)
 	if (in_file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", filename);
-		_free(buff_line, in_file);
+		exit(EXIT_FAILURE);
 	}
 	while (getline(&buff_line, &buff_size, in_file) != EOF)
 	{
