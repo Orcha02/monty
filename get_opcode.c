@@ -13,7 +13,7 @@ int get_opcode(char *token, unsigned int line, stack_t **stack)
 		{"pall", pall_stack},
 		{"pint", pint_stack},
 		{"pop", pop_stack},
-		/*{"swap", swap_stack},*/
+		{"swap", swap_stack},
 		{"add", _add},
 		{"nop", _nop},
 		{NULL, NULL}
