@@ -92,7 +92,7 @@ void pop_stack(stack_t **top, unsigned int line_number)
 {
 	stack_t *tmp = *top;
 
-	if (!top)
+	if (top == NULL || *top == NULL)
 	{
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
 		exit(EXIT_FAILURE);
