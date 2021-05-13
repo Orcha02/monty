@@ -53,6 +53,7 @@ void pop_stack(stack_t **top, unsigned int line_number);
 /* stack_2 */
 void swap_stack(stack_t **top, unsigned int line_number);
 void _div(stack_t **top, unsigned int line_number);
+void _mod(stack_t **top, unsigned int line_number);
 
 /*global*/
 int take_num;
@@ -61,6 +62,7 @@ int take_num;
 void _add(stack_t **top, unsigned int line_number);
 void _nop(stack_t **top, unsigned int line_number);
 void _sub(stack_t **top, unsigned int line_number);
+void _mul(stack_t **top, unsigned int line_number);
 
 /* monty.c */
 int is_number(char *token);
