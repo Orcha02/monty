@@ -24,8 +24,6 @@ void swap_stack(stack_t **top, unsigned int line_number)
 	else
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
-		/*free(gv.tokens);*/
-		/*fclose(gv.fp);*/
 		exit(EXIT_FAILURE);
 	}
 }
