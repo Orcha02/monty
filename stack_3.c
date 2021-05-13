@@ -16,6 +16,7 @@ void _add(stack_t **top, unsigned int line_number)
 	}
 	tmp = (*top)->next;
 	tmp->n += (*top)->n;
+	pop_stack(top, line_number);
 }
 /**
  * _nop - Function that doesnt do anything
