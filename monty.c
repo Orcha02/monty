@@ -23,7 +23,6 @@ int is_number(char *token)
  * open_file_to_read - Open a monty files
  * @filename: Name if monty file
  * @stack: Structure
- * @line_number: Line counter
  * Return: 0
  */
 int open_file_to_read(char *filename, stack_t **stack)

@@ -29,7 +29,7 @@ void push_stack(stack_t **top, unsigned int line_number)
 	*top = new_node;
 }
 /**
- * pall_stack - Function that prints all the values on the stack, starting from the top of the stack.
+ * pall_stack - Prints all values of stack, starting from top of stack.
  * @top: element at the top of the stack (head)
  * @line_number: constant int value in the structure
  * Return: void
@@ -44,7 +44,6 @@ void pall_stack(stack_t **top, unsigned int line_number)
 		printf("%d\n", tmp->n);
 		tmp = tmp->next;
 	}
-	
 }
 /**
  * pint_stack - Function that print the valueat top of stack
@@ -67,7 +66,6 @@ void pint_stack(stack_t **top, unsigned int line_number)
 /**
  * free_stack - Function that print the valueat top of stack
  * @top: element at the top of the stack (head)
- * @line_number: constant int value in the structure
  * Return: void
  */
 void free_stack(stack_t **top)
@@ -84,4 +82,23 @@ void free_stack(stack_t **top)
 		free(tmp);
 		tmp = *top;
 	}
+}
+/**
+ * pop_stack - Function that pop (delete) the value at top of stack
+ * @top: element at the top of the stack (head)
+ * @line_number: constant int value in the structure
+ * Return: void
+ */
+void pop_stack(stack_t **top, unsigned int line_number)
+{
+	stack_t *tmp = *top;
+
+	if (top == NULL)
+	{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_number);
+		exit(EXIT_FAILURE);
+	}
+	tmp = tmp->next;
+	free(*top);
+	*top = tmp;
 }

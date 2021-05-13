@@ -1,5 +1,10 @@
 #include "monty.h"
-
+/**
+ * main - main entry
+ * @argc: Total of arguments
+ * @argv: Arguments, monty file
+ * Return: int
+ */
 int main(int argc, char *argv[])
 {
 	stack_t *stack = NULL;
