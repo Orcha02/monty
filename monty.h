@@ -43,9 +43,6 @@ size_t print_dlistint(const stack_t *h);
 /*get_opcode*/
 int get_opcode(char *token, unsigned int line, stack_t **stack);
 
-/*global*/
-int take_num;
-
 /* stack */
 void pint_stack(stack_t **top, unsigned int line_number);
 void pall_stack(stack_t **top, unsigned int line_number);
@@ -55,13 +52,14 @@ void pop_stack(stack_t **top, unsigned int line_number);
 
 /* stack_2 */
 void swap_stack(stack_t **top, unsigned int line_number);
-void _nop(stack_t **top, unsigned int line_number);
+
+/*global*/
+int take_num;
 
 /* stack_3 */
 void _add(stack_t **top, unsigned int line_number);
+void _nop(stack_t **top, unsigned int line_number);
 void _sub(stack_t **top, unsigned int line_number);
-void _div(stack_t **top, unsigned int line_number);
-void _mul(stack_t **top, unsigned int line_number);
 
 /* monty.c */
 int is_number(char *token);
