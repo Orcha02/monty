@@ -41,13 +41,14 @@ int delete_dnodeint_at_index(stack_t **head, unsigned int index);
 size_t print_dlistint(const stack_t *h);
 
 /*get_opcode*/
-void (*get_opcode(char *token, unsigned int line)) (stack_t **, unsigned int);
-void open_file_to_read(char *filename);
-/*Invalid_instruction_error*/
-void Invalid_instruction_error(char *inv_instruction, unsigned int line);
+int (*get_opcode(char *token, unsigned int line, stack_t **stack));
 
 /* stack */
-
 void pint_stack(stack_t **top, unsigned int line_number);
-	
+void push_stack(stack_t **stack, unsigned int nline);
+
+/*monty.c*/
+int is_number(char *token);
+int open_file_to_read(char *filename, stack_t **stack);
+
 #endif /* MONTY_H */
