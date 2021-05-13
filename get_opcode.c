@@ -11,7 +11,7 @@ void (*get_opcode(char *token, unsigned int line)) (stack_t **, unsigned int)
 	instruction_t operation[] = {
 		/*{"push", push_stack},*/
 		/*{"pall", pall_stack},*/
-		/*{"pint", pint_stack},*/
+		{"pint", pint_stack},
 		/*{"pop", pop_stack},*/
 		/*{"swap", swap},*/
 		{NULL, NULL}
@@ -19,9 +19,7 @@ void (*get_opcode(char *token, unsigned int line)) (stack_t **, unsigned int)
 	for (i = 0; operation[i].opcode != NULL; i++)
 	{
 		if (strcmp(token, operation[i].opcode) == 0)
-		{
 			return (operation[i].f);
-		}
 	}
 	/*Invalid_instruction_error(token, line);*/
 	return (NULL);
