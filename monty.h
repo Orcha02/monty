@@ -61,6 +61,7 @@ void _nop(stack_t **top, unsigned int line_number);
 void _add(stack_t **top, unsigned int line_number);
 void _sub(stack_t **top, unsigned int line_number);
 void _div(stack_t **top, unsigned int line_number);
+void _mul(stack_t **top, unsigned int line_number);
 
 /* monty.c */
 int is_number(char *token);
