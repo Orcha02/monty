@@ -16,6 +16,7 @@ int get_opcode(char *token, unsigned int line, stack_t **stack)
 		{"swap", swap_stack},
 		{"add", _add},
 		{"nop", _nop},
+		{"sub", _sub},
 		{NULL, NULL}
 	};
 	int i;
