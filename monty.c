@@ -36,9 +36,7 @@ int open_file_to_read(char *filename, stack_t **stack)
 	if (in_file == NULL)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", filename);
-		free(buff_line);
-		fclose(in_file);
-		exit(EXIT_FAILURE);
+		_free(buff_line, in_file);
 	}
 	while (getline(&buff_line, &buff_size, in_file) != EOF)
 	{
@@ -52,9 +50,7 @@ int open_file_to_read(char *filename, stack_t **stack)
 				if (is_number(number) == -1)
 				{
 					fprintf(stderr, "L%u: usage: push integer\n", line_counter);
-					free(buff_line);
-					fclose(in_file);
-					exit(EXIT_FAILURE);
+					_free(buff_line, in_file);
 				}
 				take_num = atoi(number);
 			}
@@ -62,10 +58,8 @@ int open_file_to_read(char *filename, stack_t **stack)
 			if (get_opcode(token, line_counter, stack) == 1)
 			{
 				fprintf(stderr, "L%u Unknown instruction %s\n", line_counter, token);
-				free(buff_line);
+				_free(buff_line, in_file);
 				free_stack(stack);
-				fclose(in_file);
-				exit(EXIT_FAILURE);
 			}
 		}
 	}
@@ -73,4 +67,16 @@ int open_file_to_read(char *filename, stack_t **stack)
 	/* free_stack(stack); */
 	fclose(in_file);
 	return (0);
+}
+/**
+ * _free - Free line, close file and exit
+ * @buff_line:line
+ * @in_file: file
+ * Return: 0
+ */
+void _free(char *buff_line, FILE *in_file)
+{
+	free(buff_line);
+	fclose(in_file);
+	exit(EXIT_FAILURE);
 }
