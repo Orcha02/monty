@@ -41,7 +41,7 @@ int open_file_to_read(char *filename, stack_t **stack)
 		token = strtok(buff_line, "\n\t\r ");
 		number = strtok(NULL, "\n\t\r ");
 		line_counter++;
-		if (token)
+		if (token && token[0] != '#')
 		{
 			if (strcmp(token, "push") == 0)
 			{
