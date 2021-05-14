@@ -54,6 +54,7 @@ void pop_stack(stack_t **top, unsigned int line_number);
 void swap_stack(stack_t **top, unsigned int line_number);
 void _div(stack_t **top, unsigned int line_number);
 void _mod(stack_t **top, unsigned int line_number);
+void _pchar(stack_t **top, unsigned int line_number);
 
 /*global*/
 int take_num;
