@@ -65,7 +65,7 @@ void _mul(stack_t **top, unsigned int line_number)
 
 	if (*top == NULL || (*top)->next == NULL)
 	{
-		fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);
+		fprintf(stderr, "L%u: can't mul, stack too short\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 	tmp = (*top)->next;
