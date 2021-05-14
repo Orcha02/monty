@@ -98,7 +98,7 @@ void _pchar(stack_t **top, unsigned int line_number)
 		printf("%c\n", character);
 	else
 	{
-		fprintf(stderr, "L%u: can't pchar, stack empty\n", line_number);
+		fprintf(stderr, "L%u: can't pchar, value out of range\n", line_number);
 		free_stack(top);
 		exit(EXIT_FAILURE);
 	}
